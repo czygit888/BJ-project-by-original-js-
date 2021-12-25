@@ -1,0 +1,1020 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/footer D.css">
+    <link rel="stylesheet" href="/css/head D.css">
+    <link rel="stylesheet" href="/css/animate.css">
+    <script src="/js/head D.js"></script>
+    <script src="/js/swiper.min.js"></script>
+    <style>
+        body {
+            overflow-x: hidden;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        #footerD {
+            position: absolute;
+            bottom: -5130px;
+        }
+
+        .main {
+            height: 4300px;
+            width: 100vw;
+            position: relative;
+            /* box-sizing: border-box;
+            padding: 60px 40px; */
+            background-color: #eeebea;
+            margin-top: -40px;
+        }
+
+        #header_re {
+            width: 100vw;
+            height: 550px;
+            background: url(/img/re_head.jpg) bottom no-repeat;
+            background-size: 100%;
+            position: relative;
+            color: #fff;
+        }
+
+        #header_re>div {
+            position: absolute;
+            top: 280px;
+            left: 80px;
+            font-size: 34px;
+        }
+
+        #header_re>div:last-child {
+            top: 330px;
+            width: 480px;
+            display: flex;
+        }
+
+        #header_re>div:last-child>ul {
+            list-style: none;
+            width: 33%;
+            font-size: 20px;
+        }
+
+        #header_re>div:last-child>ul>li {
+            margin: 15px 0;
+        }
+
+        .nav_re li {
+            color: #e8afaf;
+            position: relative;
+        }
+
+        .mainprev {
+            width: 100vw;
+            box-sizing: border-box;
+            padding: 100px 40px;
+            background: #fff;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .mainprev .group {
+            display: flex;
+            width: 75%;
+            justify-content: space-around;
+        }
+
+        .mainprev img {
+            width: 320px
+        }
+
+        .mainprev .group>div {
+            width: 9.5%;
+            box-shadow: 0 1px 10px 0 rgba(0, 0, 0, .3);
+            box-sizing: border-box;
+            padding: 30px 20px;
+            position: relative;
+            transform: translate(0, 40px);
+            opacity: 0;
+            transition: all .5s ease-out;
+        }
+
+        .mainprev .group>div.showdiv {
+            transform: none;
+            opacity: 1;
+        }
+
+        .mainprev .group>div>div {
+            width: 18px;
+            font-size: 18px;
+            color: #333;
+            cursor: pointer;
+        }
+
+        .mainprev .group>div>div::before {
+            content: '';
+            width: 4px;
+            position: absolute;
+            background: #94070a;
+            left: 0;
+            top: 30px;
+            bottom: 100px;
+            transition: all .3s ease-out;
+        }
+
+        .mainprev .group>div::after {
+            content: '';
+            background: url(/img/afterbg.png) right bottom no-repeat;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0px;
+            right: 0;
+            opacity: 0;
+            transition: all .3s ease-out;
+        }
+
+        .mainprev .group>div:hover::after {
+            opacity: 1;
+        }
+
+        .mainprev .group>div:hover>div::before {
+            top: 0;
+            bottom: 0;
+        }
+
+        .main_1 {
+            position: relative;
+            width: 100%;
+            height: 1100px
+        }
+
+        .aname {
+            display: block;
+            text-align: center;
+            font-size: 34px;
+            margin-top: 40px;
+        }
+
+        .main_1>div:nth-child(2)>div {
+            position: absolute;
+            margin-top: 40px;
+        }
+
+        .main_1>div:nth-child(2)>div:last-child {
+            width: 700px;
+            height: 640px;
+            background: #fff;
+            right: 40px;
+            top: 200px;
+            transform: translate(80px, 0);
+            transition: all 2s ease-out;
+            opacity: 0;
+        }
+
+        .main_1>div:nth-child(2)>div:last-child.showdiv {
+            transform: none;
+            opacity: 1;
+        }
+
+        .main_1>div:nth-child(2)>div:first-child {
+            transform: translate(-80px, 0);
+            transition: all 2s ease-out;
+            opacity: 0;
+        }
+
+        .main_1>div:nth-child(2)>div:first-child.showdiv {
+            transform: none;
+            opacity: 1;
+        }
+
+        .groupaaa {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            box-sizing: border-box;
+            padding: 20px 40px;
+            height: 310px
+        }
+
+        .groupaaa>div {
+            width: 25%;
+            text-align: center;
+            transition: all .2s ease-out;
+            transform: translate(0, 0);
+        }
+
+        .groupaaa>div:hover {
+            transform: translate(0, -10px);
+            cursor: pointer;
+        }
+
+        .groupaaa>div>img {
+            width: 50px
+        }
+
+        .groupaaa>div>p {
+            margin: 15px 0;
+            font-size: 18px;
+
+        }
+
+        .svgmore i {
+            width: 45px;
+            height: 45px;
+            background: url('/img/more1.svg') center center no-repeat;
+            float: left;
+            margin-right: 15px;
+            background-size: contain;
+        }
+
+        .svgmore i::before {
+            content: '';
+            background: url('/img/more1a.svg') center center no-repeat;
+            width: 100%;
+            height: 100%;
+            transition: all .2s ease-out;
+            display: block;
+            opacity: 0;
+        }
+
+        .svgmore:hover ::before {
+            opacity: 1;
+        }
+
+        .main_2 {
+            height: 1200px;
+            width: 100%;
+            background: #362d2e url(/img/bg23.png) left top no-repeat;
+            box-sizing: border-box;
+            padding: 80px 40px;
+            position: relative;
+        }
+
+        .hoversqua:hover {
+            cursor: pointer;
+            box-shadow: 0 0px 20px 10px rgba(0, 0, 0, .3);
+        }
+
+        .main_2>div:nth-child(2)>div {
+            position: absolute;
+            margin-top: 40px;
+        }
+
+        .main_2>div:nth-child(2)>div:first-child {
+            width: 700px;
+            height: 580px;
+            background: #2c1e1f;
+            left: 30px;
+            top: 260px;
+            z-index: 4;
+            transform: translate(-80px, 0);
+            transition: all 2s ease-out;
+            opacity: 0;
+        }
+
+        .main_2>div:nth-child(2)>div:first-child.showdiv {
+            transform: none;
+            opacity: 1;
+        }
+
+        .main_2>div:nth-child(2)>div:last-child {
+            transform: translate(80px, 0);
+            position: absolute;
+            top: 200px;
+            right: 90px;
+            transition: all 2s ease-out;
+            opacity: 0;
+        }
+
+        .main_2>div:nth-child(2)>div:last-child.showdiv {
+            transform: none;
+            opacity: 1;
+        }
+
+        .main_2 div.squa {
+            display: flex;
+            width: 100%;
+            height: 280px;
+            justify-content: space-between;
+        }
+
+        .main_2 div.squa>div {
+            width: 50%;
+            height: 100%;
+        }
+
+        .main_2 div.squa>div:first-child {
+            background: #94070a;
+        }
+
+        .main_2 div.squa>div:first-child:hover {
+            box-shadow: 2px 0 20px 10px #000;
+        }
+
+        .main_2 div.squa>div:last-child {
+            background: url(/img/pic66.jpg)
+        }
+
+        .main_2 div.squa>div>div {
+            text-align: center;
+            margin-top: 20%;
+            color: #fff;
+        }
+
+        .main_2 div.squa>div>div>p {
+            font-size: 24px;
+            margin-top: 10px;
+        }
+
+        .lou2_group {
+            width: 100%;
+            height: 300px;
+            display: flex;
+            box-sizing: border-box;
+            padding: 100px 30px;
+            justify-content: space-evenly;
+        }
+
+        .lou2_group>div {
+            text-align: center;
+            transition: all .2s ease-out;
+            transform: translate(0, 0);
+        }
+
+        .lou2_group>div:hover {
+            transform: translate(0, -10px);
+            cursor: pointer;
+        }
+
+        .lou2_group p {
+            color: #fff;
+            font-size: 18px;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .lou2_group img {
+            width: 60px
+        }
+
+        .main_2 .svgmore i {
+            width: 45px;
+            height: 45px;
+            background: url('/img/more1b.svg') center center no-repeat;
+            float: left;
+            margin-right: 15px;
+            background-size: contain;
+        }
+
+        .main_3 {
+            height: 1020px;
+            background: #fff;
+            box-sizing: border-box;
+            padding: 80px 50px;
+            position: relative;
+        }
+
+        .lou3_group {
+            width: 640px;
+            height: 340px;
+            background: #94070a;
+            position: absolute;
+            bottom: 20px;
+            left: 600px;
+            box-sizing: border-box;
+            padding: 60px 70px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .lou3_group>div {
+            width: 100px;
+            text-align: center;
+            color: #fff;
+        }
+
+        .lou3_group img {
+            width: 60px;
+            transform: translateY(0);
+            transition: all .5s ease-out;
+        }
+
+        .lou3_group img:hover {
+            cursor: pointer;
+            transform: translateY(-10px);
+        }
+
+        .lou3_group p {
+            font-size: 18px;
+            margin-top: 10px;
+        }
+
+        .main_4 {
+            height: 600px;
+            width: 100%;
+            box-sizing: border-box;
+            padding: 60px 30px;
+        }
+
+        .groupbbb {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 40px;
+        }
+
+        .groupbbb>div {
+            width: 24%;
+            text-align: center;
+            background: #fff;
+            height: 200px;
+            box-sizing: border-box;
+            padding: 40px;
+            box-shadow: 0 0 10px rgb(0 0 0 / 15%);
+            position: relative;
+            transform: translate(0, 50px);
+            opacity: 0;
+            transition: all 2.5s ease-out;
+        }
+
+        .groupbbb>div.showdiv {
+            transform: none;
+            opacity: 1;
+        }
+
+        .groupbbb>div::before {
+            content: '';
+            width: 100%;
+            height: 100%;
+            background: url(/img/png65.png) 10px no-repeat;
+            position: absolute;
+            background-size: 50%;
+            transform-origin: right bottom;
+            transform: scale(0.95);
+            opacity: 0;
+            transition: all .5s ease-out;
+        }
+
+        .groupbbb>div:hover::before {
+            opacity: 0.95;
+            transform: scale(1);
+        }
+
+        .groupbbb>div:after {
+            content: '';
+            background: #94070a;
+            position: absolute;
+            bottom: 0;
+            right: 0px;
+            left: 0px;
+            width: 100%;
+            height: 4px;
+        }
+
+        @keyframes bottom {
+            0% {
+                left: 0;
+                width: 100%
+            }
+
+            50% {
+                left: 135px;
+                width: 20%
+            }
+
+            100% {
+                left: 0;
+                width: 100%
+            }
+        }
+
+        .groupbbb>div:hover:after {
+            animation: bottom .5s ease-out 0s;
+        }
+
+        .groupbbb img {
+            width: 80px;
+        }
+
+        .groupbbb p {
+            font-size: 18px;
+            margin-top: 10px;
+
+        }
+
+        .main_5 {
+            width: 100%;
+            height: 800px;
+            background: #fff url(/img/bg23_reverse.png) right bottom no-repeat;
+            position: relative;
+            box-sizing: border-box;
+            padding: 80px 40px;
+        }
+
+        .lou5_l {
+            width: 680px;
+            height: 520px;
+            background: #8c726e
+        }
+
+        .lou5_r {
+            position: absolute;
+            top: 150px;
+            right: 40px;
+            width: 700px;
+            height: 650px;
+            background: url(/img/1213.jpg) no-repeat;
+            box-sizing: border-box;
+            padding: 100px 80px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .lou5_l .svgmore i {
+            width: 45px;
+            height: 45px;
+            background: url('/img/more1b.svg') center center no-repeat;
+            float: left;
+            margin-right: 15px;
+            background-size: contain;
+        }
+
+        .lou5_l>div:first-child {
+            box-sizing: border-box;
+            padding: 80px;
+            padding-bottom: 0;
+        }
+
+        .kecheng {
+            display: flex;
+
+        }
+
+        .kecheng>ul {
+            list-style: none;
+            color: #fff;
+            margin: 30px 0;
+            margin-right: 30px;
+            font-size: 16px;
+        }
+
+        .kecheng>ul>li {
+            margin-bottom: 20px;
+        }
+
+        .kecheng>ul>li:hover {
+            cursor: pointer;
+            color: #94070a
+        }
+
+        .lou5_l>div:last-child {
+            display: flex;
+        }
+
+        .lou5_l>div:last-child>div {
+            width: 50%;
+            height: 124px;
+            color: #fff;
+            font-size: 24px;
+        }
+
+        .lou5_l>div:last-child>div>div {
+            text-align: center;
+            line-height: 124px;
+        }
+
+        .lou5_l>div:last-child>div>div>img {
+            vertical-align: middle;
+            margin-right: 10px;
+        }
+
+        .lou5_l>div:last-child>div:first-child {
+            background: #94070a
+        }
+
+        .lou5_l>div:last-child>div:last-child {
+            background: #000;
+        }
+
+        .lou5_r li {
+            margin-bottom: 20px;
+        }
+
+        .lou5_r li:hover {
+            cursor: pointer;
+            color: #94070a
+        }
+
+        .nav_re li a {
+            width: 180px;
+            height: 40px;
+            display: inline-block;
+            position: absolute;
+            left: -40px;
+        }
+
+        .nav_re li.active {
+            color: #fff;
+
+        }
+
+        .nav_re li.active::before {
+            content: '⇀';
+            display: block;
+            position: absolute;
+            left: -30px;
+            top: -3px;
+            font-size: 25px;
+            color: #fff
+        }
+
+        .nav_re li.active:hover::before {
+            animation: shakeX 3s infinite
+        }
+    </style>
+</head>
+
+<body>
+    <div id="headerD"></div>
+    <div id="header_re">
+        <div>招生</div>
+        <div class='nav_re'>
+            <ul>
+                <li onclick='jiantou(this)'>本科生<a href="#benkesheng"></a></li>
+                <li onclick='jiantou(this)'>继续教育<a href=""></a></li>
+            </ul>
+            <ul>
+                <li onclick='jiantou(this)'>研究生<a href="#yanjiusheng"></a></li>
+                <li onclick='jiantou(this)'>学生奖助信息<a href="#xueshengjiangzhuxinxi"></a></li>
+            </ul>
+            <ul>
+                <li onclick='jiantou(this)'>留学生<a href="#liuxuesheng"></a></li>
+                <li onclick='jiantou(this)'>暑期学校<a href="#shuqi"></a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="mainprev">
+        <div>
+            <div style='font-size: 28px;margin:30px 0;'>招生</div>
+            <div><img src="/img/bgwelcome.png" alt=""></div>
+        </div>
+        <div class="group">
+            <div style='transition-delay: 0s;'>
+                <div>本科生</div>
+            </div>
+            <div style='transition-delay: 0.1s;'>
+                <div>研究生</div>
+            </div>
+            <div style='transition-delay: 0.2s;'>
+                <div>留学生</div>
+            </div>
+            <div style='transition-delay: 0.3s;'>
+                <div>继续教育</div>
+            </div>
+            <div style='transition-delay: 0.4s;'>
+                <div>暑期学校</div>
+            </div>
+            <div style='transition-delay: 0.5s;'>
+                <div>学生奖助信息</div>
+            </div>
+            <div style='transition-delay: 0.6s;'>
+                <div>就业信息</div>
+            </div>
+            <div style='transition-delay: 0.7s;'>
+                <div>新生通道</div>
+            </div>
+            <div style='transition-delay: 0.8s;'>
+                <div>毕业生通道</div>
+            </div>
+        </div>
+    </div>
+    <div class="main">
+        <div class="main_1">
+            <div style='box-sizing: border-box;padding: 40px 10px;'><a name='benkesheng' class="aname">本科生</a></div>
+            <div>
+                <div class="swiper" style='width:820px;overflow:hidden'>
+                    <div class="swiper-wrapper" style='display: flex;'>
+                        <div class="swiper-slide"><img src="/img/re_swiper1.jpg" alt=""></div>
+                        <div class="swiper-slide"><img src="/img/re_swiper2.jpg" alt="">
+                        </div>
+                        <div class="swiper-slide"><img src="/img/re_swiper3.jpg" alt=""></div>
+                    </div>
+                </div>
+                <div>
+                    <p style='margin:40px 40px;font-size: 24px;'>招生日历</p>
+                    <div class='groupaaa'>
+                        <div><img src="/img/re_lou1_1.png" alt="">
+                            <p>保送生</p>
+                        </div>
+                        <div><img src="/img/re_lou1_2.png" alt="">
+                            <p>强基计划</p>
+                        </div>
+                        <div><img src="/img/re_lou1_3.png" alt="">
+                            <p>高水平艺术团</p>
+                        </div>
+                        <div><img src="/img/re_lou1_4.png" alt="">
+                            <p>高水平运动队</p>
+                        </div>
+                        <div><img src="/img/re_lou1_5.png" alt="">
+                            <p>逐梦计划</p>
+                        </div>
+                        <div><img src="/img/re_lou1_6.png" alt="">
+                            <p>港澳台侨</p>
+                        </div>
+                        <div><img src="/img/re_lou1_7.png" alt="">
+                            <p>留学生</p>
+                        </div>
+                        <div></div>
+                    </div>
+                    <div style='width:100%;height:220px;display: flex;'>
+                        <div style='width:50%;background:#94070a;text-align: cneter;position: relative;'
+                            class='hoversqua'><img src="/img/re_lou1_8.png" alt=""
+                                style='position: absolute;top:20%;left:43%'>
+                            <p
+                                style='width:100%;height:100%;text-align: center;margin-top: 35%;font-size: 24px;color:#fff'>
+                                报考必读</p>
+                        </div>
+                        <div style='width:50%;background:#8c726e;text-align: cneter;position: relative;'
+                            class='hoversqua'><img src="/img/re_lou1_9.png" alt=""
+                                style='position: absolute;top:20%;left:43%'>
+                            <p
+                                style='width:100%;height:100%;text-align: center;margin-top: 35%;font-size: 24px;color:#fff'>
+                                FAQ</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div style="position: absolute;top:1000px;left:calc(50% - 43px)"><a href="javascript:;" class='svgmore'
+                    style='line-height: 45px;color:#94070a'><i></i>进入北大招生网</a></div>
+        </div>
+        <div class="main_2">
+            <div style='color:#FFF;' class='aname'><a name='yanjiusheng'>研究生</a></div>
+            <div>
+                <div>
+                    <div class='squa'>
+                        <div class='hoversqua'>
+                            <div><img src="/img/icon6_1.png" alt="">
+                                <p>最新公告</p>
+                            </div>
+                        </div>
+                        <div class='hoversqua'>
+                            <div><img src="/img/icon6_2.png" alt="">
+                                <p>招生信息</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='lou2_group'>
+                        <div>
+                            <img src="/img/re_lou2_1.png" alt="">
+                            <p>硕士招生</p>
+                        </div>
+                        <div>
+                            <img src="/img/re_lou2_2.png" alt="">
+                            <p>博士招生</p>
+                        </div>
+                        <div>
+                            <img src="/img/re_lou2_3.png" alt="">
+                            <p>港澳台招生</p>
+                        </div>
+                        <div>
+                            <img src="/img/re_lou2_4.png" alt="">
+                            <p>留学生招生</p>
+                        </div>
+                        <div>
+                            <img src="/img/re_lou2_5.png" alt="">
+                            <p>夏令营</p>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="swiper" style='width:820px;overflow:hidden'>
+                        <div class="swiper-wrapper" style='display: flex;'>
+                            <div class="swiper-slide"><img src="/img/re_lou2-lun1.jpg" alt=""></div>
+                            <div class="swiper-slide"><img src="/img/re_lou2-lun2.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div style='position: absolute;bottom:0;width:100%;display: flex;justify-content: center;'>
+                <div style="text-align: center;margin:60px 20px"><a href="javascript:;" class='svgmore'
+                        style='line-height: 45px;color:#fff'><i></i>进入北大招生网</a></div>
+                <div style="text-align: center;margin:60px 20px"><a href="javascript:;" class='svgmore'
+                        style='line-height: 45px;color:#fff'><i></i>进入北大招生网</a></div>
+                <div style="text-align: center;margin:60px 20px"><a href="javascript:;" class='svgmore'
+                        style='line-height: 45px;color:#fff'><i></i>进入北大招生网</a></div>
+            </div>
+        </div>
+        <div class="main_3">
+            <a name='liuxuesheng'></a>
+            <div>
+                <div class="swiper" style='width:100%;overflow:hidden;'>
+                    <div class="swiper-wrapper" style='display: flex;'>
+                        <div class="swiper-slide"><img src="/img/re_lou3_1.jpg" alt=""></div>
+                        <div class="swiper-slide"><img src="/img/re_lou3_2.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div style='font-size: 32px;margin:40px 130px;'><a style='color:black'>留学生</a></div>
+            <div style="text-align: center;margin:60px 130px;width:200px"><a href="javascript:;" class='svgmore'
+                    style='line-height: 45px;color:#94070a'><i></i>进入北大留学生招生网</a></div>
+            <div class='lou3_group'>
+                <div>
+                    <div><img src="/img/re_lou3_1.png" alt="">
+                        <p>本科生</p>
+                    </div>
+                </div>
+                <div>
+                    <div><img src="/img/re_lou3_2.png" alt="">
+                        <p>硕士生</p>
+                    </div>
+                </div>
+                <div>
+                    <div><img src="/img/re_lou3_3.png" alt="">
+                        <p>博士生</p>
+                    </div>
+                </div>
+                <div>
+                    <div><img src="/img/re_lou3_4.png" alt="">
+                        <p>进修生</p>
+                    </div>
+                </div>
+                <div>
+                    <div><img src="/img/re_lou3_5.png" alt="">
+                        <p>预科生</p>
+                    </div>
+                </div>
+                <div>
+                    <div><img src="/img/re_lou3_6.png" alt="">
+                        <p>暑期学校</p>
+                    </div>
+                </div>
+                <div>
+                    <div><img src="/img/re_lou3_7.png" alt="">
+                        <p>短期学习</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="main_4">
+            <div style='text-align: center;font-size: 32px;'><a name='xueshengjiangzhuxinxi'>学生奖助信息</a></div>
+            <div class='groupbbb'>
+                <div style='transition-delay:0.1s ;'>
+                    <div><img src="/img/re_lou4_1.png" alt="">
+                        <p>本科生奖助</p>
+                    </div>
+                </div>
+                <div style='transition-delay:0.5s ;'>
+                    <div><img src="/img/re_lou4_2.png" alt="">
+                        <p>研究生奖助</p>
+                    </div>
+                </div>
+                <div style='transition-delay:0.9s ;'>
+                    <div><img src="/img/re_lou4_3.png" alt="">
+                        <p>留学生奖助</p>
+                    </div>
+                </div>
+                <div style='transition-delay:1.1s ;'>
+                    <div><img src="/img/re_lou4_4.png" alt="">
+                        <p>北京大学学生资助中心</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="main_5">
+            <div class='lou5_l'>
+                <div>
+                    <div style='color:#fff;font-size: 28px;'><a name='shuqi'>教务部暑期学校</a></div>
+                    <div style="text-align: center;margin:30px 0;width:250px"><a href="javascript:;" class='svgmore'
+                            style='line-height: 45px;color:#fff'><i></i>进入北京大学暑期学校网站</a></div>
+                    <div style='color:#fff;font-size: 24px;'>课程信息</div>
+                    <div class='kecheng'>
+                        <ul>
+                            <li>A类课程</li>
+                            <li>往年课程</li>
+                        </ul>
+                        <ul>
+                            <li>B类课程</li>
+                            <li>暑期学校（港澳台）</li>
+                        </ul>
+                        <ul>
+                            <li>C类课程</li>
+                        </ul>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <div><img src="/img/icon9_1.png" alt=""><span>联系我们</span></div>
+                    </div>
+                    <div>
+                        <div><img src="/img/icon9_2.png" alt=""><span>报名信息</span></div>
+                    </div>
+                </div>
+            </div>
+            <div class='lou5_r'>
+                <div style='width:100%'>
+                    <div style='font-size: 32px;'>国际暑期学校</div>
+                    <div style="text-align: center;margin:30px 0;width:250px"><a href="javascript:;" class='svgmore'
+                            style='line-height: 45px;color:#94070a'><i></i>进入北京大学暑期学校网站</a></div>
+                </div>
+                <div style='display: flex; font-size: 18px;'>
+                    <ul style='list-style: none;margin-right:140px'>
+                        <li>课程列表</li>
+                        <li>课程日历</li>
+                    </ul>
+                    <ul style='list-style: none;margin-right:40px'>
+                        <li>教师信息</li>
+                        <li>联系我们</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="footerD"></div>
+    <script>
+        var re_lis = document.querySelectorAll('.nav_re li')
+        function jiantou(that) {
+            console.log(that)
+            Array.from(re_lis).forEach(el => el.className = '')
+            that.className = 'active'
+        }
+
+        var Swiperaaa = new Swiper('.swiper', {
+            autoplay: true,//可选选项，自动滑动
+            loop: true,
+            speed: 300,
+            autoplay: {
+                delay: 7000
+            }
+        })
+        var groupbbb = document.querySelectorAll('.groupbbb>div')
+        var trans4 = function () {
+            groupbbb.forEach(el => { el.className = 'showdiv' })
+        }
+        var lou2_1 = document.querySelector('.main_2>div:nth-child(2)>div:first-child')
+        var lou2_2 = document.querySelector('.main_2>div:nth-child(2)>div:last-child')
+        var trans3 = function () {
+            lou2_1.className = 'showdiv'
+            lou2_2.className = 'showdiv'
+        }
+        var lou1_1 = document.querySelector('.main_1>div:nth-child(2)>div:first-child')
+        var lou1_2 = document.querySelector('.main_1>div:nth-child(2)>div:last-child')
+        var trans2 = function () {
+            lou1_1.className = 'showdiv'
+            lou1_2.className = 'showdiv'
+        }
+        var groupaaa = document.querySelectorAll('.mainprev .group>div')
+        var trans1 = function () {
+            groupaaa.forEach(el => { el.className = 'showdiv' })
+        }
+        // 页面滚动的相应位置加上动画类名
+        // 跳到指定位置的时候就是提前把类名删掉
+        window.addEventListener('scroll', function () {
+            var scroll = document.documentElement.scrollTop || document.body.scrollTop
+            // console.log(scroll)
+            scroll == 0 && trans1()
+            scroll > 370 && trans2()
+            scroll > 1384 && trans3()
+            scroll > 3594 && trans4()
+        })
+    </script>
+    <script>
+        const xhr = new XMLHttpRequest();
+        xhr.open('get', '/header.html', false);
+        xhr.onreadystatechange = function () {
+            if (this.status == 200 && this.readyState == 4) {
+                const header = document.querySelector('#headerD')
+                header.innerHTML = this.responseText
+            }
+        }
+        xhr.send();
+        // 尾部片段
+        xhr.open('get', '/footer.html', false);
+        xhr.onreadystatechange = function () {
+            if (this.status == 200 && this.readyState == 4) {
+                const footer = document.querySelector('#footerD')
+                footer.innerHTML = this.responseText
+            }
+        }
+        xhr.send();
+        xhr.open('get', '/detailsBg.html', false);
+        xhr.onreadystatechange = function () {
+            if (this.status == 200 && this.readyState == 4) {
+                const headerbg = document.querySelector('#headergu')
+                headerbg.innerHTML = this.responseText
+            }
+        }
+        xhr.send();
+        var active = document.querySelector("#headerBg>div:nth-child(2) li.active")
+        active.className = ''
+        var now = document.querySelector('#headerBg>div:nth-child(2)>ul:nth-child(3)> li:first-child')
+        now.className = 'active animate__shakeX'
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,122 @@
+#footer{
+    width:100vw;
+    height:320px;
+}
+.footer1{
+    width:100%;
+    height:120px;
+    background:#94070a;
+    display: flex;
+    justify-content: center;
+}
+.footer1>div:first-child{
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+}
+.footer1>div:first-child>div{
+    width:12.5%;
+}
+.footer1>div:first-child>div>span{
+    font-size: 16px;
+    display:inline-block;
+    color:#fff;
+    line-height: 120px;
+    height:80px;
+    width:100%;
+    text-align: center;
+    border-left:1px solid rgba(255,255,255,0.2) ;
+}
+.footer1>div:first-child>div>span:hover{
+    opacity:0.8;
+    cursor:pointer;
+}
+.footer1>div:last-child{
+    width:15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position:relative
+}
+.footer1 .code>div::after{
+    content:'';
+    width:0;
+    height:0;
+    display: block;
+    border:8px solid transparent;
+    border-top-color:white;
+    
+    
+}
+.footer1 .code>div{
+    height:120px;
+    width:100px;
+    display:flex;
+    position: absolute;
+    top:-275%;
+    left:calc(50% - 50px);
+    flex-direction:column;
+    align-items:center;
+    transform:translateY(-10px);
+    opacity:0;
+    visibility: hidden;
+    transition:all 0.2s ease-out;
+   
+}
+.footer1 .code:hover>div{
+    transform:none;
+    visibility:visible;
+    opacity:0.8;
+}
+.footer1 .code:hover{
+    opacity:0.8
+}
+.footer1 .code{
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+    margin:0 5px;
+    width:40px;
+    height:40px;
+    border-radius: 50%;
+    background:#fff;
+}
+.footer1 .code::after{
+    content: '\e603';
+    font-size: 2em;
+    color: #94070a !important;
+    font-family:icon;
+    margin-left: 0.25em;
+    display: inline-block;
+    margin-top:0.2em
+}
+.footer1 .code img{
+    width:100%;
+}
+.footer1>div:last-child>div:last-child  .code:after{
+    content:'\e605'
+}
+.footer2{
+    height:200px;
+    background:#302a29;
+    padding: 40px;
+    box-sizing: border-box;
+}
+
+.footer2>div:first-child>img{
+    width:200px;
+    display: block;
+    margin:10px auto;
+
+}
+.footer2>div:last-child{
+    display: flex;
+    width:90%;
+    color:#fff;
+    justify-content: space-between;
+    margin:50px 50px;
+
+}
+.footer2>div:last-child>div{
+    cursor:pointer;
+}

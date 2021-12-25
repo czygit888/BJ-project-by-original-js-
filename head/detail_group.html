@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="/js/head D.js"></script>
+    <link rel="stylesheet" href="/css/animate.css">
+    <link rel="stylesheet" href="/css/head D.css">
+    <link rel="stylesheet" href="/css/footer D.css">
+    <link rel="stylesheet" href="/css/detail_head.css">
+    <style>
+        .main {
+            width: 100vw;
+            height: 1900px;
+            background: url(/img/group_bg.png) bottom left no-repeat;
+            background-color: #fff;
+            position: absolute;
+            top: 678px;
+            box-sizing: border-box;
+            padding: 30px;
+            padding-left: 50px;
+        }
+
+        .title {
+            font-size: 32px;
+            margin-left: calc(50% - 50px);
+            margin-top: 50px;
+        }
+
+        #footerD {
+            position: absolute;
+            bottom: -1660px;
+        }
+
+        .group {
+            margin-top: 90px;
+            position: relative;
+        }
+
+        .group>div {
+            width: calc(50% - 15px);
+            box-sizing: border-box;
+            padding: 30px 40px;
+            box-shadow: 0 1px 5px 0 rgba(0, 0, 0, .3);
+            position: absolute;
+            z-index: 100;
+            background-color: #fff;
+            transform: translate(0,80px);
+            opacity:0;
+            transition: all 2s ease-out;
+
+        }
+
+        .group>div::after {
+            content: '';
+            border-bottom: 4px solid #94070a;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            transition: all .5s linear;
+        }
+
+        .group>div:hover::after {
+            width: 692px;
+        }
+
+        .group>div>div:last-child {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .group>div>div:first-child {
+            position: absolute;
+            top: -5px;
+            left: 0;
+            width: 692px;
+            height: 80px;
+            background: url(/img/group_title.png) left no-repeat;
+        }
+
+        .group>div>p {
+            font-size: 32px;
+            margin: 30px 0;
+            margin-top: 80px;
+        }
+
+        .group>div>div>ul {
+            padding-left: 60px;
+
+        }
+
+        .group>div>div>ul>li {
+            font-size: 18px;
+            margin: 20px 0px;
+            margin-bottom: 20px;
+            position: relative;
+            cursor: pointer;
+        }
+
+
+
+
+        .group>div>div>ul>li::before {
+            content: '⇀';
+            display: block;
+            position: absolute;
+            left: -40px;
+            top: -6px;
+            font-size: 25px;
+            color: #94070a
+        }
+
+        .group>div>div>ul>li:hover::before {
+            animation: shakeX 3s infinite
+        }
+    </style>
+</head>
+
+<body>
+    <div id="headerD"></div>
+    <div id="headergu"></div>
+    <div class="main">
+        <div class='title'>组织机构</div>
+        <div class="group">
+            <div style='top:0;left:0;transition-delay: 0.1s;'>
+                <div></div>
+                <p>治理机构</p>
+                <div>
+                    <ul>
+                        <li>学术委员会</li>
+                        <li>校务委员会</li>
+                        <li>教职工代表大会</li>
+                    </ul>
+                    <ul>
+                        <li>学位评定委员会</li>
+                        <li>监察委员会</li>
+                    </ul>
+                </div>
+            </div>
+            <div style='top:0;left:712px;transition-delay: 0.2s'>
+                <div></div>
+                <p>学部与院系</p>
+                <div>
+                    <ul>
+                        <li>理学部</li>
+                        <li>人文学部</li>
+                        <li>经济与管理学部</li>
+                        <li>跨学科类</li>
+                    </ul>
+                    <ul>
+                        <li>信息与工程科学部</li>
+                        <li>社会科学学部</li>
+                        <li>医学部</li>
+                    </ul>
+                </div>
+            </div>
+            <div style='top:384px;left:0;transition-delay: 0.3s'>
+                <div></div>
+                <p>研究机构</p>
+                <div>
+                    <ul>
+                        <li>实体研究机构</li>
+                        <li>虚体研究机构</li>
+                    </ul>
+                    <ul>
+                        <li>科学研究基地</li>
+                    </ul>
+                </div>
+            </div>
+            <div style='top:428px;left:712px; transition-delay: 0.4s'>
+                <div></div>
+                <p>管理服务</p>
+                <div>
+                    <ul>
+                        <li>职能部门</li>
+                        <li>群团组织</li>
+                    </ul>
+                    <ul>
+                        <li>挂靠单位</li>
+                        <li>直属、附属单位</li>
+                    </ul>
+                </div>
+            </div>
+            <div style='top:724px;left:0px;transition-delay: 0.5s'>
+                <div></div>
+                <p>产学研</p>
+                <div>
+                    <ul>
+                        <li>校办企业</li>
+                    </ul>
+                    <ul>
+                        <li>产学研结合</li>
+                    </ul>
+                </div>
+            </div>
+            <div style='top:768px;left:712px;transition-delay: 0.6s'>
+                <div></div>
+                <p>医学部</p>
+            </div>
+            <div style='top:1020px;left:0px;transition-delay: 0.7s'>
+                <div></div>
+                <p>深圳研究生院</p>
+            </div>
+        </div>
+    </div>
+    <div id="footerD"></div>
+    <script>
+        const xhr = new XMLHttpRequest();
+        xhr.open('get', '/header.html', false);
+        xhr.onreadystatechange = function () {
+            if (this.status == 200 && this.readyState == 4) {
+                const header = document.querySelector('#headerD')
+                header.innerHTML = this.responseText
+            }
+        }
+        xhr.send();
+        // 尾部片段
+        xhr.open('get', '/footer.html', false);
+        xhr.onreadystatechange = function () {
+            if (this.status == 200 && this.readyState == 4) {
+                const footer = document.querySelector('#footerD')
+                footer.innerHTML = this.responseText
+            }
+        }
+        xhr.send();
+        xhr.open('get', '/detailsBg.html', false);
+        xhr.onreadystatechange = function () {
+            if (this.status == 200 && this.readyState == 4) {
+                const headerbg = document.querySelector('#headergu')
+                headerbg.innerHTML = this.responseText
+            }
+        }
+        xhr.send();
+        var active = document.querySelector("#headerBg>div:nth-child(2) li.active")
+        active.className = ''
+        var now = document.querySelector('#headerBg>div:nth-child(2)>ul:last-child> li:last-child')
+        now.className = 'active animate__shakeX'
+    </script>
+    <script>
+        // 加载之后的动画
+        window.addEventListener('load',()=>{
+            var group=document.querySelectorAll('.group>div')
+            for(let g of group){
+                g.style.transform='none';
+                g.style.opacity='1'
+            }
+        })
+    </script>
+</body>
+
+</html>

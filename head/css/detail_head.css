@@ -1,0 +1,70 @@
+*{
+    margin:0;padding:0;
+}
+ul {
+    list-style: none;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+#headerD {
+    height: 121px;
+    position: fixed;
+    z-index: 1000;
+}
+
+#footerD {
+    width:100vw;
+    height: 222px;
+    position: absolute;
+    z-index: 10;
+}
+
+#headerBg {
+    position: relative;
+    top: 121px;
+    width: 100vw;
+    height: 557px;
+    background: url(/img/detailsHeadBg.jpg) no-repeat;
+    background-size: cover;
+    box-sizing: border-box;
+    padding-top: 300px;
+    padding-left: 100px;
+    color: #fff;
+
+}
+
+#headerBg>div:nth-child(2) {
+    display: flex;
+    width: 490px;
+    justify-content: space-between;
+    color: #e8afaf;
+    font-size: 20px;
+    margin-top: 40px;
+}
+
+#headerBg>div:nth-child(2) li {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+#headerBg>div:nth-child(2) li.active {
+    color: #fff;
+
+}
+
+#headerBg>div:nth-child(2) li.active::before {
+    content: '⇀';
+    display: block;
+    position: absolute;
+    left: -40px;
+    top: -6px;
+    font-size: 25px;
+    color: #fff
+}
+
+#headerBg>div:nth-child(2) li.active:hover::before {
+    animation: shakeX 3s infinite
+}

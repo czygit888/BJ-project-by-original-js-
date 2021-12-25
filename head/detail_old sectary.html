@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/detail_head.css">
+    <link rel="stylesheet" href="/css/footer D.css">
+    <link rel="stylesheet" href="/css/head D.css">
+    <link rel="stylesheet" href="/css/animate.css">
+    <script src="/js/head D.js"></script>
+    <style>
+        .main {
+            height: 900px;
+            width: 100vw;
+            margin-top: 120px;
+            position: relative;
+            box-sizing: border-box;
+            padding: 60px 40px;
+            background-color: #fff;
+        }
+
+        .main>div:first-child {
+            text-align: center;
+            font-size: 32px;
+            margin: 60px 0;
+        }
+
+        .tabs {
+            font-size: 22px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .tabs::before {
+            content: '';
+            border-top: 1px solid #ddd;
+            position: absolute;
+            left: 0;
+            right: 0;
+            width: 100%;
+            z-index: 0;
+            margin-top: 16px
+        }
+
+        .tabs>div {
+            padding: 0 20px;
+            box-sizing: border-box;
+            margin: 0 50px;
+            z-index: 3;
+            background: #fff;
+            position: relative;
+            cursor: pointer;
+        }
+
+        .tabs>div::before {
+            content: '';
+            border-left: 1px solid #ddd;
+            height: 15px;
+            position: absolute;
+            left: 0;
+            top: 10px
+        }
+
+        .tabs>div::after {
+            content: '';
+            border-right: 1px solid #ddd;
+            display: inline-block;
+            height: 15px;
+            position: absolute;
+            right: 0;
+            top: 10px
+        }
+
+        .content {
+            display: flex;
+            justify-content: center;
+            margin-top: 50px
+        }
+
+        .content>div,
+        .mask {
+            width: 363px;
+            height: 520px;
+            box-shadow: 0 1px 20px 0 rgba(0, 0, 0, .3);
+            margin: 0 7px;
+            box-sizing: border-box;
+            padding: 20px 30px;
+            font-size: 18px;
+            color: #333;
+        }
+
+        .tab1 {
+            color: #94070a;
+            font-size: 24px;
+        }
+
+        .content>div li {
+            box-sizing: border-box;
+            padding: 15px 10px;
+            cursor: pointer;
+        }
+
+        .content>div:first-child {
+            background: url(/img/png41_1.png) bottom no-repeat;
+
+        }
+
+        .content>div:last-child {
+            background: url(/img/png41_2.png) bottom no-repeat;
+        }
+
+        .mask {
+            position: absolute;
+            top: 304px;
+            background: #fff;
+            padding: 70px 40px;
+            display: none;
+        }
+
+        .mask>div {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .mask>div>div:first-child{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            box-sizing: border-box;
+            padding: 20px 0;
+        }
+        .mask .inf {
+            width:100%
+        }
+        .mask .inf >p{
+            text-align: center;
+            box-sizing: border-box;
+            padding: 10px 0;
+            color:#94070a;
+            color:24px
+        }
+        .about{
+            margin-top: 20px;
+            font-size: 14px;
+            text-indent: 28px;
+            width:220px;
+            height:90px;
+            overflow-y: auto;
+        }
+        .about::-webkit-scrollbar-thumb {
+            border-radius: 10px;
+            border: 10px solid #94070a;
+            background: #94070a;
+        }
+        .about::-webkit-scrollbar{
+            background: #ddd;
+            width:4px;
+            /* background-color:transparent; */
+        }
+        .mask>div.del{
+            font-size:40px;
+            width:40px;
+            height: 40px;
+            line-height: 40px;
+            position: absolute;
+            top:0;
+            right:0;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="headerD"></div>
+    <div id="headergu"></div>
+    <div class="main">
+        <div>历任领导</div>
+        <div class="tabs">
+            <div class="tab1">历任党委书记</div>
+            <div class='tab2'>历任校长</div>
+        </div>
+        <div class="content">
+            <div>
+                <ul>
+                    <li data-birth="(1905—1966)" data-desc="(1956.07-1957.10)" data-title="江隆基"
+                        data-litpic="https://www.pku.edu.cn//Uploads/Picture/2019/12/03/s5de5dec707496.jpg"
+                        data-litpictitle="" data-litpicalt="" data-content="<p>
+	字盘安。陕西省西乡人。教育家。1925年考入北京大学预科。1952年10月任北京大学副校长。1956年7月任北京大学党委第一书记兼副校长。1957年10月至1958年9月，任北京大学党委第二书记兼副校长。
+</p>">江隆基 (1956.07-1957.10)</li>
+                    <li data-birth="(1914－2002)" data-desc="(1957.10-1966.06)" data-title="陆　平"
+                        data-litpic="https://www.pku.edu.cn//Uploads/Picture/2019/12/03/s5de5df01e6b3e.jpg"
+                        data-litpictitle="" data-litpicalt="" data-content="<p>
+	原名刘志贤，又名卢荻，吉林长春人。1934年至1937年在北京大学教育系学习。1957年10月至1966年6月任北京大学党委第一书记，并先后兼任副校长、校长。
+</p>">陆　平 (1957.10-1966.06)</li>
+                    <li data-birth="(1912－1997)" data-desc="(1977.09-1979.12)" data-title="周　林"
+                        data-litpic="https://www.pku.edu.cn//Uploads/Picture/2019/12/03/s5de5e9791f6df.gif"
+                        data-litpictitle="" data-litpicalt="" data-content="<p>
+	贵州仁怀人。1977年9月至1979年12月任北京大学党委书记。
+</p>
+<br />">周　林 (1977.09-1979.12)</li>
+                    <li data-birth="(1914－)" data-desc="(1979.12-1982.09)" data-title="韩天石"
+                        data-litpic="https://www.pku.edu.cn//Uploads/Picture/2019/12/03/s5de5e987b5d14.gif"
+                        data-litpictitle="" data-litpicalt="" data-content="<p>
+	又名韩麟祥，辽宁沈阳人。1933年入北京大学物理系学习。1979年12月至1982年9月任北京大学党委书记。
+</p>">韩天石 (1979.12-1982.09)</li>
+                    <li data-birth="(1926－)" data-desc="(1984.03-1991.01)" data-title="王学珍"
+                        data-litpic="https://www.pku.edu.cn//Uploads/Picture/2019/12/03/s5de5e99f645d2.gif"
+                        data-litpictitle="" data-litpicalt="" data-content="<p>
+	浙江龙游人。1947年考入北京大学法律系。曾任中共北京大学总支部（1951年2月改为北京大学党委）组织部部长、副书记，北大教务处处长、教务长、副校长兼教务长等职。1984年3月至1991年1月任北京大学党委书记。
+</p>">王学珍 (1984.03-1991.01)</li>
+                    <li data-birth="(1929－)" data-desc="(1991.01-1994.07)" data-title="汪家鏐"
+                        data-litpic="https://www.pku.edu.cn//Uploads/Picture/2019/12/03/s5de5e9b1ec3aa.gif"
+                        data-litpictitle="" data-litpicalt="" data-content="<p>
+	浙江平湖人。1946年入北京大学文学院学习。曾任中共北京大学党总支委员兼文学院党支部书记。北平解放后历任新民主主义青年团北大总支部副书记、书记。1991年1月至1994年7月任北京大学党委书记。
+</p>">汪家鏐 (1991.01-1994.07)</li>
+                    <li data-birth="(1945－)" data-desc="(1994.07-2000.03)" data-title="任彦申"
+                        data-litpic="https://www.pku.edu.cn//Uploads/Picture/2019/12/03/s5de5e9c049612.gif"
+                        data-litpictitle="" data-litpicalt="" data-content="<p>
+	河北隆尧人。1991年1月，任北京大学党委副书记。1994年7月至2000年3月，任北京大学党委书记。
+</p>">任彦申 (1994.07-2000.03)</li>
+                    <li data-birth="(1937－)" data-desc="(2000.04-2002.04)" data-title="王德炳"
+                        data-litpic="https://www.pku.edu.cn//Uploads/Picture/2019/12/03/s5de5e9d28feed.gif"
+                        data-litpictitle="" data-litpicalt="" data-content="<p>
+	河南方城人。2000年4月至2002年4月任北京大学党委书记。
+</p>">王德炳 (2000.04-2002.04)</li>
+                </ul>
+            </div>
+            <div>
+                <ul>
+                    <li data-birth="(1950－)" data-desc="(2002.04-2011.08)" data-title="闵维方"
+                        data-litpic="https://www.pku.edu.cn//Uploads/Picture/2019/12/03/s5de5e9e3c6b04.gif"
+                        data-litpictitle="" data-litpicalt="" data-content="<p>
+                        黑龙江齐齐哈尔人。2002年4月至2011年8月任北京大学党委书记。
+                    </p>">闵维方 (2002.04-2011.08)</li>
+                    <li data-birth="" data-desc="(2011.08-2016.12)" data-title="朱善璐"
+                        data-litpic="https://www.pku.edu.cn//Uploads/Picture/2020/03/05/s5e608bc488104.jpg"
+                        data-litpictitle="" data-litpicalt="" data-content="朱善璐 ：辽宁沈阳人，2011年8月至2016年12月任北京大学党委书记。">朱善璐
+                        (2011.08-2016.12)
+                    </li>
+                    <li data-birth="" data-desc="(2016.12-2018.10)" data-title="郝　平"
+                        data-litpic="https://www.pku.edu.cn//Uploads/Picture/2020/03/05/s5e608bb01aa68.jpg"
+                        data-litpictitle="" data-litpicalt="" data-content="郝平：山东青岛人，2016年12月至2018年10月任北京大学党委书记。">郝　平
+                        (2016.12-2018.10)</li>
+                </ul>
+            </div>
+        </div>
+        <div class="mask">
+            <div>
+                <div><img src="" alt="" class="img" ></div>
+                <div class="inf">
+                    <p class="name" ></p>
+                    <p class="bir"></p>
+                </div>
+                <div class="about">
+                </div>
+            </div>
+            <div class="del">×</div>
+        </div>
+    </div>
+    </div>
+    <div id="footerD"></div>
+    <script>
+        // 点击每个li样式会改变
+        // 点击第一个ul下的li的mask位置变化
+        var div = document.querySelector('.content')
+        var mask = document.querySelector('.mask')
+        var lis = document.querySelectorAll('.content>div>ul>li')
+        var img = document.querySelector('.img')
+        var ename = document.querySelector('.name')
+        var bir = document.querySelector('.bir')
+        var about = document.querySelector('.about')
+        var del=document.querySelector('.mask>div.del')
+        div.onclick = function (e) {
+            let target = e.target
+            if (target.nodeName == 'LI') {
+                lis.forEach((el, i) => {
+                    el.style.background = ''
+                    el.style.color = '#333'
+                    if (el === target) {
+                        // console.log(1)
+                        target.style.background = '#94070a url(/img/oldleader_clickbg.png) right no-repeat'
+                        target.style.color = 'white'
+                        mask.style.display = 'block'
+                        i >= 8 && (mask.style.left = '370px')
+                        i < 8 && (mask.style.left = '746px');
+                        img.src = el.getAttribute('data-litpic')
+                        ename.innerHTML = el.getAttribute('data-title')
+                        bir.innerHTML = el.getAttribute('data-desc')
+                        about.innerHTML = el.getAttribute('data-content')
+                    }
+                })
+            }
+        }
+        del.onclick=function(){
+            this.parentElement.style.display='none'
+            lis.forEach((el, i) => {el.style.background = '';el.style.color = '#333'})
+        }
+        var tab2=document.querySelector('.tab2')
+        tab2.onclick=function(){
+            location.href='/detail_old principle.html'
+        }
+    </script>
+    <script>
+        const xhr = new XMLHttpRequest();
+        xhr.open('get', '/header.html', false);
+        xhr.onreadystatechange = function () {
+            if (this.status == 200 && this.readyState == 4) {
+                const header = document.querySelector('#headerD')
+                header.innerHTML = this.responseText
+            }
+        }
+        xhr.send();
+        // 尾部片段
+        xhr.open('get', '/footer.html', false);
+        xhr.onreadystatechange = function () {
+            if (this.status == 200 && this.readyState == 4) {
+                const footer = document.querySelector('#footerD')
+                footer.innerHTML = this.responseText
+            }
+        }
+        xhr.send();
+        xhr.open('get', '/detailsBg.html', false);
+        xhr.onreadystatechange = function () {
+            if (this.status == 200 && this.readyState == 4) {
+                const headerbg = document.querySelector('#headergu')
+                headerbg.innerHTML = this.responseText
+            }
+        }
+        xhr.send();
+        var active = document.querySelector("#headerBg>div:nth-child(2) li.active")
+        active.className = ''
+        var now = document.querySelector('#headerBg>div:nth-child(2)>ul:nth-child(3)> li:first-child')
+        now.className = 'active animate__shakeX'
+    </script>
+</body>
+
+</html>

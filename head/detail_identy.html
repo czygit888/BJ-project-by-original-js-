@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/detail_head.css">
+    <link rel="stylesheet" href="/css/footer D.css">
+    <link rel="stylesheet" href="/css/head D.css">
+    <link rel="stylesheet" href="/css/animate.css">
+    <script src="/js/head D.js"></script>
+    <style>
+        .main {
+            height: 2600px;
+            width: 100vw;
+            margin-top: 120px;
+            position: relative;
+            box-sizing: border-box;
+            padding: 60px 40px;
+            font-size: 18px;
+            background: #fff;
+        }
+
+        #footerD {
+            position: absolute;
+            bottom: -2600px
+        }
+        .main>div:first-child{
+            font-size: 32px;
+            width:100%;
+            text-align: center;
+            margin-top:60px
+        }
+        .main>div{
+            text-align: center;
+        }
+
+        .h{
+            margin:20px
+        }
+    </style>
+</head>
+
+<body>
+    <div id="headerD"></div>
+    <div id="headergu"></div>
+    <div class="main">
+        <div>标识系统</div>
+        <div>
+            <img src="/img/identy_1.png" alt="">
+        </div>
+        <div class="h">标志使用规范</div>
+        <div><img src="/img/arr3.png" alt=""></div>
+        <div >
+            <img src="/img/identy_2.png" alt="">
+        </div>
+        <div class="h">标准色使用规范</div>
+        <div><img src="/img/arr3.png" alt=""></div>
+        <div><img src="/img/identy_3.png" alt=""></div>
+        <div class="h">中英文校名使用规范</div>
+        <div><img src="/img/arr3.png" alt=""></div>
+        <div><img src="/img/identy_4.png" alt=""></div>
+        <div class="h">标识规范手册</div>
+        <div><img src="/img/arr3.png" alt=""></div>
+
+        <div><img src="/img/identy_5.png" alt=""></div>
+        <div class="h">标志与二级单位组合使用规范</div>
+        <div><img src="/img/arr3.png" alt=""></div>
+
+        <div><img src="/img/identy_6.png" alt=""></div>
+        <div class="h">辅助图形使用规范</div>
+
+    </div>
+    <div id="footerD"></div>
+    <script>
+        const xhr = new XMLHttpRequest();
+        xhr.open('get', '/header.html', false);
+        xhr.onreadystatechange = function () {
+            if (this.status == 200 && this.readyState == 4) {
+                const header = document.querySelector('#headerD')
+                header.innerHTML = this.responseText
+            }
+        }
+        xhr.send();
+        // 尾部片段
+        xhr.open('get', '/footer.html', false);
+        xhr.onreadystatechange = function () {
+            if (this.status == 200 && this.readyState == 4) {
+                const footer = document.querySelector('#footerD')
+                footer.innerHTML = this.responseText
+            }
+        }
+        xhr.send();
+        xhr.open('get', '/detailsBg.html', false);
+        xhr.onreadystatechange = function () {
+            if (this.status == 200 && this.readyState == 4) {
+                const headerbg = document.querySelector('#headergu')
+                headerbg.innerHTML = this.responseText
+            }
+        }
+        xhr.send();
+        var active = document.querySelector("#headerBg>div:nth-child(2) li.active")
+        active.className = ''
+        var now = document.querySelector('#headerBg>div:nth-child(2)>ul:nth-child(3)> li:last-child')
+        now.className = 'active animate__shakeX'
+    </script>
+</body>
+
+</html>

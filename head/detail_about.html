@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="/js/head D.js"></script>
+    <link rel="stylesheet" href="/css/animate.css">
+    <link rel="stylesheet" href="/css/head D.css">
+    <link rel="stylesheet" href="/css/footer D.css">
+    <style>
+        *{
+            margin:0;padding:0;
+        }
+        ul {
+            list-style: none;
+        }
+
+        body {
+            overflow-x: hidden;
+        }
+
+        #headerD {
+            height: 121px;
+            position: fixed;
+            z-index: 1000;
+        }
+
+        #footerD {
+            width:100vw;
+            height: 222px;
+            position: absolute;
+            z-index: 10;
+        }
+
+        #headerBg {
+            position: relative;
+            top: 121px;
+            width: 100vw;
+            height: 557px;
+            background: url(/img/detailsHeadBg.jpg) no-repeat;
+            background-size: cover;
+            box-sizing: border-box;
+            padding-top: 300px;
+            padding-left: 260px;
+            color: #fff;
+
+        }
+
+        #headerBg>div:nth-child(2) {
+            display: flex;
+            width: 490px;
+            justify-content: space-between;
+            color: #e8afaf;
+            font-size: 20px;
+            margin-top: 40px;
+        }
+
+        #headerBg>div:nth-child(2) li {
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        #headerBg>div:nth-child(2) li.active {
+            color: #fff;
+
+        }
+
+        #headerBg>div:nth-child(2) li.active::before {
+            content: '⇀';
+            display: block;
+            position: absolute;
+            left: -40px;
+            top: -6px;
+            font-size: 25px;
+            color: #fff
+        }
+
+        #headerBg>div:nth-child(2) li.active:hover::before {
+            animation: shakeX 3s infinite
+        }
+
+        .main {
+            width: 100vw;
+            height:2300px;
+            background-color: #fff;
+            position: relative;
+            top:120px;
+            margin:0 auto;
+        }
+        .mainbg{
+            background:url(/img/about_bghead.png) left top no-repeat ;
+            width:700px;height: 420px;
+            position: absolute;
+            top:0px;left:0;
+            background-size: contain;
+        }
+        .block{
+            width: 100vw;
+            padding:0 50px;
+            position: absolute;
+            top:180px;left:0;
+            display: flex;
+            justify-content: space-between;
+            box-sizing: border-box;
+            z-index: 100;
+        }
+        .text{
+            width:60%;
+            font-size:18px;
+        }
+        .text p{
+            text-indent: 25px;
+            text-align: justify;
+            color:#333;
+            
+        }
+        .text>div{
+            padding:50px 50px;
+            box-sizing: border-box;
+            border: 1px solid #e0e0e0;
+            border-top:0;
+            border-right:0;
+        }
+        .text>div:first-child::before{
+            content: '';
+            width:10px;
+            height:10px;
+            position:absolute;
+            background:#e0e0e0;
+            border-radius: 50%;
+            top:-5px;
+            left:603px
+        }
+        .img1,.img2,.img3{
+            position: absolute;
+            top:180px;
+            left:400px
+        }
+        .img2{
+            top:660px;
+        }
+        .img3{
+            top:990px;
+        }
+        .imggroup{
+            position:absolute;
+            bottom: 0;
+        }
+        .imgg6,.imgg5,.imgg4,.imgg3,.imgg2,.imgg1{
+            position: absolute;
+        }
+        .imgg6{
+            bottom:0px;
+            left:480px;
+            width:1000px;
+            z-index: 0;
+        }
+        .imgg1{
+            bottom:120px;
+            width:250px;
+        }
+        .imgg3{
+            bottom:120px;
+            left:250px;
+            z-index: 200;
+            width:250px
+        }
+        .imgg5{
+            bottom: 120px;
+            left:500px;
+            z-index: 300;
+            width:408px
+        }
+        .imgg2{
+            bottom:342px;
+            z-index: 400;
+            left:250px;
+            width:343px
+        }
+        .imgg4{
+            bottom:342px;
+            width:96.5px;
+            left:593px;
+            z-index: 500;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="headerD"></div>
+    <div id="headerBg">
+        <div style='font-size: 40px;'>北大概况</div>
+        <div>
+            <ul>
+                <li class='active animate__shakeX'>北大简介</li>
+                <li>历史名人</li>
+            </ul>
+            <ul>
+                <li>现任领导</li>
+                <li>信息公开</li>
+            </ul>
+            <ul>
+                <li>历任领导</li>
+                <li>标识系统</li>
+            </ul>
+            <ul>
+                <li>组织机构</li>
+            </ul>
+        </div>
+    </div>
+    <div class='main'>
+        <div class='mainbg'></div>
+        <img src="/img/about_time1.png" alt="" class='img1'>
+        <img src="/img/about_time2.png" alt="" class='img2'>
+        <img src="/img/about_time3.png" alt="" class='img3'>
+        <div class="block">
+            <div class="logo">
+                <img src="/img/about_logo.png" alt="">
+            </div>
+            <div class='text'>
+                <div>
+                    <p>北京大学创办于1898年，初名京师大学堂，是中国第一所国立综合性大学，也是当时中国最高教育行政机关。辛亥革命后，于1912年改为现名。</p>
+                    <br>
+                    <p>作为新文化运动的中心和“五四”运动的策源地，作为中国最早传播马克思主义和民主科学思想的发祥地，作为中国共产党最早的活动基地，北京大学为民族的振兴和解放、国家的建设和发展、社会的文明和进步做出了不可替代的贡献，在中国走向现代化的进程中起到了重要的先锋作用。爱国、进步、民主、科学的传统精神和勤奋、严谨、求实、创新的学风在这里生生不息、代代相传。</p>
+                    <br>
+                    <p>1937年卢沟桥事变后，北京大学与清华大学、南开大学南迁长沙，共同组成长沙临时大学。不久，临时大学又迁到昆明，改称国立西南联合大学。抗日战争胜利后，北京大学于1946年10月在北平复学。</p>
+                    <br>
+                </div>
+                <div>
+                    <p>中华人民共和国成立后，全国高校于1952年进行院系调整，北京大学成为一所以文理基础教学和研究为主的综合性大学，为国家培养了大批人才。据不完全统计，北京大学的校友和教师有400多位两院院士，中国人文社科界有影响的人士相当多也出自北京大学。</p>
+                    <br>
+                    <p>改革开放以来，北京大学进入了一个前所未有的大发展、大建设的新时期，并成为国家“211工程”重点建设的两所大学之一。</p>
+                    <br>
+                    <p>改革开放以来，北京大学进入了一个前所未有的大发展、大建设的新时期，并成为国家“211工程”重点建设的两所大学之一。</p>
+                    <br>
+                </div>
+                <div>
+                    <p>2000年4月3日，北京大学与原北京医科大学合并，组建了新的北京大学。原北京医科大学的前身是国立北京医学专门学校，创建于1912年10月26日。20世纪三、四十年代，学校一度名为北平大学医学院，并于1946年7月并入北京大学。1952年在全国高校院系调整中，北京大学医学院脱离北京大学，独立为北京医学院。1985年更名为北京医科大学，1996年成为国家首批“211工程”重点支持的医科大学。两校合并进一步拓宽了北京大学的学科结构，为促进医学与人文社会科学及理科的结合，改革医学教育奠定了基础。</p>
+                    <br>
+                    <p>近年来，在“211工程”和“985工程”的支持下，北京大学进入了一个新的历史发展阶段，在学科建设、人才培养、师资队伍建设、教学科研等各方面都取得了显著成绩，为将北大建设成为世界一流大学奠定了坚实的基础。今天的北京大学已经成为国家培养高素质、创造性人才的摇篮、科学研究的前沿和知识创新的重要基地和国际交流的重要桥梁和窗口。</p>
+                    <br>
+                    <p>现任校党委书记邱水平、校长郝平。</p>
+                    <br>
+                </div>
+                <div style='height:500px;border-bottom: 0;'></div>
+            </div>
+        </div>
+        <div class='imggroup'>
+            <img src="/img/about_lion.jpg" alt=""  class='imgg1'>
+            <img src="/img/about_bird.jpg" alt="" class='imgg2'>
+            <img src="/img/about_hua.jpg" alt="" class='imgg3'>
+            <img src="/img/about_red.jpg" alt="" class='imgg4'>
+            <img src="/img/about_zhi.jpg" alt="" class='imgg5'>
+            <img src="/img/about_ta.jpg" alt="" class='imgg6'>
+        </div>
+    </div>
+    <div id="footerD"></div>
+    <script>
+        const xhr = new XMLHttpRequest();
+        xhr.open('get', '/header.html', false);
+        xhr.onreadystatechange = function () {
+            if (this.status == 200 && this.readyState == 4) {
+                const header = document.querySelector('#headerD')
+                header.innerHTML = this.responseText
+            }
+        }
+        xhr.send();
+        // 尾部片段
+        xhr.open('get', '/footer.html', false);
+        xhr.onreadystatechange = function () {
+            if (this.status == 200 && this.readyState == 4) {
+                const footer = document.querySelector('#footerD')
+                footer.innerHTML = this.responseText
+            }
+        }
+        xhr.send();
+    </script>
+</body>
+
+</html>
